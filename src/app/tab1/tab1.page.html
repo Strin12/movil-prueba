@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon slot="icon-only" name="bonfire"></ion-icon>
+    </ion-buttons>
+
+    <ion-title> Posts </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col
+        size="12"
+        size-lg="3"
+        size-md="4"
+        size-sm="6"
+        size-xs="12"
+        *ngFor="let post of posts"
+      >
+        <ion-card>
+          <ion-card-header>
+            <ion-img src="{{'http://127.0.0.1:8000/posts/'+post.foto}}" alt="">
+            </ion-img>
+          </ion-card-header>
+
+          <ion-card-content> {{post.descripcion}} </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
